@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services - RH Cleaning Solutions LTD</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/favicon-modified.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --dark: #111318;
+    --dark2: #1c1f26;
+    --white: #ffffff;
+    --blue: #0055FF;
+    --blue-light: #3377FF;
+    --blue-dim: rgba(0,85,255,0.12);
+    --grey-bg: #F4F6FA;
+    --text-muted: #8891a4;
+    --radius: 14px;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-body);
+    background: var(--white);
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 7px;
+    transition: color .2s, background .2s;
+  }
+
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.07); }
+
+  .nav-logo {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+    line-height: 1.25;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-logo span { color: var(--blue); }
+
+  .btn-quote {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s, transform .15s;
+    text-decoration: none;
+    display: inline-block;
+  }
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 70px;
+    width: auto;
+}
+  .btn-quote:hover { background: var(--blue-light); transform: translateY(-1px); }
+
+  .dropdown { position: relative; }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: var(--dark2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    min-width: 180px;
+    padding: 6px;
+    z-index: 200;
+  }
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-menu a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 6px;
+  }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 22px; height: 2px; background: white; border-radius: 2px; transition: .3s; }
+
+
+  /* Hero */
+  .services-hero {
+    background: var(--dark);
+    padding: 40px 14px 80px;
+    text-align: center;
+    color: white;
+  }
+  .services-hero h1 {
+    font-size: clamp(30px, 6vw, 33px);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .services-hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  /* Services Grid */
+  .services-section {
+    padding: 90px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+  }
+  .service-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,85,255,0.15);
+  }
+  .service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 26px;
+  }
+  .card-body h3 {
+    font-size: 22px;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .card-body p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--blue);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.6);
+    padding: 70px 24px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+   .footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 100px;      /* Adjust to your preferred size */
+    height: auto;
+    display: block;
+}
+
+  .footer-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .2s;
+  }
+  .footer-col ul li a:hover { color: var(--blue); }
+
+  .footer-col p { font-size: 14px; line-height: 1.75; margin-bottom: 8px; }
+  .footer-col .highlight { color: var(--blue); font-weight: 600; }
+  .footer-col .company-num { font-size: 12.5px; color: rgba(255,255,255,0.4); margin-top: 6px; }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+  .social-links { display: flex; gap: 10px; }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: background .2s, color .2s;
+    font-size: 15px;
+  }
+  .social-link:hover { background: var(--blue); color: white; }
+
+  /* WhatsApp Float */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    transition: transform .2s;
+    text-decoration: none;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card-image {
+    height: 200px;
+  }
+}
+/* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner,
+    .about-top,
+    .spotlight-inner,
+    .before-after-inner { grid-template-columns: 1fr; }
+
+    .hero-inner { gap: 40px; }
+    .about-top { gap: 36px; }
+    .spotlight-inner { gap: 36px; }
+
+    .cards-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .testi-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .features-row { grid-template-columns: 1fr; gap: 24px; }
+
+    .badge { right: 20px; }
+  }
+
+  @media (max-width: 640px) {
+    .nav-links, .btn-quote { display: none; }
+    .hamburger { display: flex; }
+    .nav-logo { font-size: 13px; }
+
+    .cards-grid, .pricing-grid, .testi-grid, .footer-inner { grid-template-columns: 1fr; }
+    .ba-btns { flex-direction: column; }
+
+    .hero-inner { padding: 0; }
+    .hero { padding: 60px 20px 70px; }
+  }
+
+  /* Mobile nav */
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--dark2);
+    padding: 12px 24px 20px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    gap: 4px;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .mobile-nav .btn-quote { display: inline-block; margin-top: 10px; text-align: center; }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-inner">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="rh.html">Home</a></li>
+        <li><a href="About Us.html">About</a></li>
+        <li class="dropdown">
+          <a href="Our Services.html">Our Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="hospitality cleaning.html">Hospitality Cleaning</a>
+            <a href="airbnb cleaning.html">AirBnB Cleaning</a>
+            <a href="office cleanig.html">Office Cleaning</a>
+            <a href="house cleaning.html">House Cleaning</a>
+            <a href="apartment cleanig.html">Apartment Cleaning</a>
+          </div>
+        </li>
+        <li><a href="Contact Us.html">Contact-us</a></li>
+        <li><a href="News.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-logo">
+    <img src="images/rh logo.png" alt="RH Cleaning Solutions Logo">
+    </div>
+
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+      <div class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="rh.html">Home</a>
+    <a href="About Us.html">About</a>
+    <a href="Our Services.html">Our Services</a>
+    <a href="Contact Us.html">Contact-us</a>
+    <a href="News.html">News</a>
+    <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="services-hero">
+  <h1>Our Services</h1>
+  <p>Expert cleaning solutions for homes, businesses, AirBnBs, and hospitality properties in Bangor and the surrounding areas</p>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="services-section">
+  <div class="services-grid">
+
+    <div class="service-card">
+      <img src="images/hospitality.jpg" alt="Hospitality">
+      <div class="card-body">
+        <h3>Hospitality Cleaning</h3>
+        <p>Comprehensive cleaning for hotels, restaurants, guest houses, and commercial kitchens.</p>
+        <a href="hospitality cleaning.html" class="service-btn">
+    Learn More →
+</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/airbnb.jpg" alt="AirBnB">
+      <div class="card-body">
+        <h3>AirBnB & Holiday Let Cleaning</h3>
+        <p>Fast turnaround deep cleans between guests. Make your property guest-ready.</p>
+        <a href="airbnb cleaning.html" class="service-btn">
+    Learn More →
+</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/office.jpg" alt="Office">
+      <div class="card-body">
+        <h3>Office & Commercial Cleaning</h3>
+        <p>Professional cleaning for offices, shops, and commercial spaces.</p>
+        <a href="office cleanig.html" class="service-btn">
+    Learn More →
+</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/house cleaning.jpg" alt="House">
+      <div class="card-body">
+        <h3>House Cleaning</h3>
+        <p>Regular or one-off house cleaning services with great attention to detail.</p>
+        <a href="house cleaning.html" class="service-btn">
+    Learn More →
+</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/appartment.jpg" alt="Apartment">
+      <div class="card-body">
+        <h3>Apartment Cleaning</h3>
+        <p>Thorough cleaning for apartments and flats.</p>
+        <a href="apartment cleanig.html" class="service-btn">
+    Learn More →
+</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+<div class="footer-logo">
+    <img src="images/rh logo.png" alt="RH Cleaning Solutions LTD Logo">
+</div>
+      <p>Professional cleaning services for homes and businesses in Bangor and the surrounding areas.</p>
+      <p class="company-num">Company No: 17282518</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="hospitality cleaning.html">Hospitality Cleaning</a></li>
+        <li><a href="airbnb cleaning.html">AirBnB Cleaning</a></li>
+        <li><a href="office cleanig.html">Office Cleaning</a></li>
+        <li><a href="house cleaning.html">House Cleaning</a></li>
+        <li><a href="apartment cleanig.html">Apartment Cleaning</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact &amp; Address</h4>
+      <p>📍 Based in <span class="highlight">North Wales, United Kingdom</span></p>
+      <p>Beddgelert, LL55 4YE</p>
+      <p style="margin-top:12px;">✉️ <a href="mailto:info@rhcleaningsolution.co.uk" style="color:rgba(255,255,255,.55);text-decoration:none;">info@rhcleaningsolution.co.uk</a></p>
+      <p>📞 <a href="tel:+447469829491" style="color:var(--blue);font-weight:600;text-decoration:none;">+44 7469829491</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© Copyright 2026 RH Cleaning Solutions LTD. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61591988694394" target="_blank" class="social-link">
+    <i class="fab fa-facebook-f"></i>
+</a>
+      <a href="https://www.instagram.com/rhcleaningsolution/" target="_blank" class="social-link">
+    <i class="fab fa-instagram"></i>
+</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/447469829491" class="wa-float" title="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 2C8.373 2 3 7.373 3 14c0 2.187.573 4.24 1.573 6.013L3 27l7.213-1.547A11.93 11.93 0 0015 26c6.627 0 12-5.373 12-12S21.627 2 15 2zm0 21.6a9.56 9.56 0 01-5.04-1.44l-.36-.213-3.733.8.827-3.627-.24-.373A9.56 9.56 0 015.4 14c0-5.293 4.307-9.6 9.6-9.6s9.6 4.307 9.6 9.6-4.307 9.6-9.6 9.6zm5.253-7.107c-.293-.147-1.72-.853-1.987-.947-.267-.093-.453-.147-.64.147-.187.293-.72.947-.88 1.12-.16.173-.32.2-.613.067-.293-.147-1.24-.453-2.36-1.453-.88-.773-1.467-1.733-1.64-2.027-.173-.293-.013-.44.133-.587.133-.133.293-.333.44-.507.147-.173.2-.293.293-.48.093-.187.04-.36-.027-.507-.067-.147-.613-1.467-.827-2-.213-.52-.44-.453-.613-.453h-.507c-.187 0-.48.067-.733.36-.24.267-.947.947-.947 2.267s.987 2.613 1.12 2.8c.147.187 1.947 2.973 4.72 4.16.667.28 1.173.44 1.573.56.667.2 1.267.173 1.747.107.533-.08 1.72-.7 1.96-1.387.24-.667.24-1.24.173-1.36-.067-.107-.24-.173-.507-.32z"/>
+  </svg>
+</a>
+<script>
+  // Mobile nav toggle
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Before/After Slider
+  const slider = document.getElementById('baSlider');
+  const afterWrap = document.getElementById('baAfterWrap');
+  const divider = document.getElementById('baDivider');
+  const handle = document.getElementById('baHandle');
+
+  let isDragging = false;
+
+  function updateSlider(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = (x - rect.left) / rect.width;
+    pct = Math.max(0.05, Math.min(0.95, pct));
+    const pctPx = pct * 100;
+    afterWrap.style.width = pctPx + '%';
+    divider.style.left = pctPx + '%';
+    handle.style.left = pctPx + '%';
+  }
+
+  slider.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
+  window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  slider.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchend', () => { isDragging = false; });
+</script>
+</body>
+</html>

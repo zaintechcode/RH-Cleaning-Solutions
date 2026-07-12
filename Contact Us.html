@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - RH Cleaning Solutions LTD</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/favicon-modified.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* === Reusing exact styles from your homepage === */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --dark: #111318;
+    --dark2: #1c1f26;
+    --white: #ffffff;
+    --blue: #0055FF;
+    --blue-light: #3377FF;
+    --blue-dim: rgba(0,85,255,0.12);
+    --grey-bg: #F4F6FA;
+    --text-muted: #8891a4;
+    --text-body: #3d4455;
+    --radius: 14px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-body);
+    background: var(--white);
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 7px;
+    transition: color .2s, background .2s;
+  }
+
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.07); }
+
+  .nav-logo {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+    line-height: 1.25;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-logo span { color: var(--blue); }
+
+  .btn-quote {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s, transform .15s;
+    text-decoration: none;
+    display: inline-block;
+  }
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 70px;
+    width: auto;
+}
+  .btn-quote:hover { background: var(--blue-light); transform: translateY(-1px); }
+
+  .dropdown { position: relative; }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: var(--dark2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    min-width: 180px;
+    padding: 6px;
+    z-index: 200;
+  }
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-menu a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 6px;
+  }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 22px; height: 2px; background: white; border-radius: 2px; transition: .3s; }
+
+
+  /* Contact Hero */
+  .contact-hero {
+    background: var(--dark);
+    padding: 40px 14px 80px;
+    text-align: center;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(30px, 6vw, 33px);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .contact-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Main Content */
+  .contact-section {
+    padding: 80px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .contact-form {
+    background: var(--grey-bg);
+    padding: 40px;
+    border-radius: var(--radius);
+  }
+
+  .contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: var(--dark);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e4eb;
+    border-radius: var(--radius-sm);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--blue);
+    outline: none;
+  }
+
+  .form-group textarea { min-height: 140px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-submit:hover {
+    background: var(--blue-light);
+    transform: translateY(-2px);
+  }
+
+  /* Contact Info + Map */
+  .contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: var(--dark);
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--blue-dim);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .map-container {
+    margin-top: 30px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,85,255,0.15);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.6);
+    padding: 70px 24px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+   .footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 100px;      /* Adjust to your preferred size */
+    height: auto;
+    display: block;
+}
+
+  .footer-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .2s;
+  }
+  .footer-col ul li a:hover { color: var(--blue); }
+
+  .footer-col p { font-size: 14px; line-height: 1.75; margin-bottom: 8px; }
+  .footer-col .highlight { color: var(--blue); font-weight: 600; }
+  .footer-col .company-num { font-size: 12.5px; color: rgba(255,255,255,0.4); margin-top: 6px; }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+  .social-links { display: flex; gap: 10px; }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: background .2s, color .2s;
+    font-size: 15px;
+  }
+  .social-link:hover { background: var(--blue); color: white; }
+
+  /* WhatsApp Float */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    transition: transform .2s;
+    text-decoration: none;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+
+/* =======================================
+   CONTACT PAGE RESPONSIVE FIX
+   Paste at the END of your CSS
+======================================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:50px;
+    align-items:start;
+}
+
+.contact-form,
+.contact-info{
+    width:100%;
+    min-width:0;
+}
+
+.contact-form{
+    padding:40px;
+}
+
+.map-container{
+    width:100%;
+    height:380px;
+    overflow:hidden;
+    border-radius:14px;
+    margin-top:30px;
+}
+
+.map-container iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block;
+}
+
+/* Tablet */
+
+@media (max-width:991px){
+
+.contact-section{
+    padding:60px 20px;
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.map-container{
+    height:320px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.contact-hero{
+    padding:40px 18px 60px;
+}
+
+.contact-hero h1{
+    font-size:30px;
+}
+
+.contact-hero p{
+    font-size:16px;
+}
+
+.contact-section{
+    padding:40px 16px;
+}
+
+.contact-form{
+    padding:24px;
+}
+
+.contact-form h2,
+.contact-info h2{
+    font-size:24px;
+}
+
+.contact-item{
+    gap:12px;
+    align-items:flex-start;
+}
+
+.contact-icon{
+    width:46px;
+    height:46px;
+    font-size:20px;
+}
+
+.map-container{
+    height:260px;
+}
+
+.btn-submit{
+    padding:15px;
+}
+
+}
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+.contact-form{
+    padding:18px;
+}
+
+.contact-form h2,
+.contact-info h2{
+    font-size:22px;
+}
+
+.map-container{
+    height:220px;
+}
+
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card-image {
+    height: 200px;
+  }
+}
+/* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner,
+    .about-top,
+    .spotlight-inner,
+    .before-after-inner { grid-template-columns: 1fr; }
+
+    .hero-inner { gap: 40px; }
+    .about-top { gap: 36px; }
+    .spotlight-inner { gap: 36px; }
+
+    .cards-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .testi-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .features-row { grid-template-columns: 1fr; gap: 24px; }
+
+    .badge { right: 20px; }
+  }
+
+  @media (max-width: 640px) {
+    .nav-links, .btn-quote { display: none; }
+    .hamburger { display: flex; }
+    .nav-logo { font-size: 13px; }
+
+    .cards-grid, .pricing-grid, .testi-grid, .footer-inner { grid-template-columns: 1fr; }
+    .ba-btns { flex-direction: column; }
+
+    .hero-inner { padding: 0; }
+    .hero { padding: 60px 20px 70px; }
+  }
+
+  /* Mobile nav */
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--dark2);
+    padding: 12px 24px 20px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    gap: 4px;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .mobile-nav .btn-quote { display: inline-block; margin-top: 10px; text-align: center; }
+
+</style>
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header>
+  <div class="nav-inner">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="rh.html">Home</a></li>
+        <li><a href="About Us.html">About</a></li>
+        <li class="dropdown">
+          <a href="Our Services.html">Our Services ▾</a>
+          <div class="dropdown-menu">
+            <a href="hospitality cleaning.html">Hospitality Cleaning</a>
+            <a href="airbnb cleaning.html">AirBnB Cleaning</a>
+            <a href="office cleanig.html">Office Cleaning</a>
+            <a href="house cleaning.html">House Cleaning</a>
+            <a href="apartment cleanig.html">Apartment Cleaning</a>
+          </div>
+        </li>
+        <li><a href="Contact Us.html">Contact-us</a></li>
+        <li><a href="News.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-logo">
+    <img src="images/rh logo.png" alt="RH Cleaning Solutions Logo">
+    </div>
+
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+      <div class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="rh.html">Home</a>
+    <a href="About Us.html">About</a>
+    <a href="Our Services.html">Our Services</a>
+    <a href="Contact Us.html">Contact-us</a>
+    <a href="News.html">News</a>
+    <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <h1>Get In Touch</h1>
+  <p>Need reliable cleaning? Our team is here to help with professional cleaning services and short-notice availability in Bangor and the surrounding areas.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="contact-grid">
+    
+    <!-- Left Side: Form -->
+<div class="contact-form">
+  <h2>Send Us a Message</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    
+    <!-- Required Hidden Field -->
+    <input type="hidden" name="access_key" value="4e5f6a09-cbff-4de6-a27e-de83443721fe">
+    
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" name="name" placeholder="Your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address *</label>
+      <input type="email" name="email" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" placeholder="Your phone number" required>
+    </div>
+
+    <div class="form-group">
+      <label>Service Needed</label>
+      <input type="text" name="service" placeholder="e.g. House Cleaning, Office, AirBnB">
+    </div>
+
+    <div class="form-group">
+      <label>Message *</label>
+      <textarea name="message" placeholder="Tell us more about your requirements..." rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Send Message</button>
+  </form>
+</div>
+
+    <!-- Right Side: Info + Map -->
+    <div>
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h3>We Come to You</h3>
+            <p>Serving Homes & Businesses in<br>
+          Bangor & Surrounding Areas</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h3>Call Us</h3>
+            <a href="tel:+44 7469 829491">+44 7469 829491</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h3>Email Us</h3>
+            <a href="mailto:info@rhcleaningsolution.co.uk">info@rhcleaningsolution.co.uk</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕒</div>
+          <div>
+            <h3>Working Hours</h3>
+            <p>Monday – Sunday: 7:00 AM – 8:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="map-container">
+        <iframe 
+          width="100%" 
+          height="380" 
+          style="border:0;" 
+          loading="lazy" 
+          allowfullscreen 
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2400.5304460462735!2d-4.108407174091893!3d53.0108268221939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48650a8f6597de5d%3A0x1729e5b2baf3ad2!2sBeddgelert%2C%20Caernarfon%20LL55%204YE%2C%20UK!5e0!3m2!1sen!2s!4v1783637470978!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+<div class="footer-logo">
+    <img src="images/rh logo.png" alt="RH Cleaning Solutions LTD Logo">
+</div>
+      <p>Professional cleaning services for homes and businesses in Bangor and the surrounding areas.</p>
+      <p class="company-num">Company No: 17282518</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="hospitality cleaning.html">Hospitality Cleaning</a></li>
+        <li><a href="airbnb cleaning.html">AirBnB Cleaning</a></li>
+        <li><a href="office cleanig.html">Office Cleaning</a></li>
+        <li><a href="house cleaning.html">House Cleaning</a></li>
+        <li><a href="apartment cleanig.html">Apartment Cleaning</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact &amp; Address</h4>
+      <p>📍 Based in <span class="highlight">North Wales, United Kingdom</span></p>
+      <p>Beddgelert, LL55 4YE</p>
+      <p style="margin-top:12px;">✉️ <a href="mailto:info@rhcleaningsolution.co.uk" style="color:rgba(255,255,255,.55);text-decoration:none;">info@rhcleaningsolution.co.uk</a></p>
+      <p>📞 <a href="tel:+447469829491" style="color:var(--blue);font-weight:600;text-decoration:none;">+44 7469829491</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© Copyright 2026 RH Cleaning Solutions LTD. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61591988694394" target="_blank" class="social-link">
+    <i class="fab fa-facebook-f"></i>
+</a>
+      <a href="https://www.instagram.com/rhcleaningsolution/" target="_blank" class="social-link">
+    <i class="fab fa-instagram"></i>
+</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/447469829491" class="wa-float" title="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 2C8.373 2 3 7.373 3 14c0 2.187.573 4.24 1.573 6.013L3 27l7.213-1.547A11.93 11.93 0 0015 26c6.627 0 12-5.373 12-12S21.627 2 15 2zm0 21.6a9.56 9.56 0 01-5.04-1.44l-.36-.213-3.733.8.827-3.627-.24-.373A9.56 9.56 0 015.4 14c0-5.293 4.307-9.6 9.6-9.6s9.6 4.307 9.6 9.6-4.307 9.6-9.6 9.6zm5.253-7.107c-.293-.147-1.72-.853-1.987-.947-.267-.093-.453-.147-.64.147-.187.293-.72.947-.88 1.12-.16.173-.32.2-.613.067-.293-.147-1.24-.453-2.36-1.453-.88-.773-1.467-1.733-1.64-2.027-.173-.293-.013-.44.133-.587.133-.133.293-.333.44-.507.147-.173.2-.293.293-.48.093-.187.04-.36-.027-.507-.067-.147-.613-1.467-.827-2-.213-.52-.44-.453-.613-.453h-.507c-.187 0-.48.067-.733.36-.24.267-.947.947-.947 2.267s.987 2.613 1.12 2.8c.147.187 1.947 2.973 4.72 4.16.667.28 1.173.44 1.573.56.667.2 1.267.173 1.747.107.533-.08 1.72-.7 1.96-1.387.24-.667.24-1.24.173-1.36-.067-.107-.24-.173-.507-.32z"/>
+  </svg>
+</a>
+<script>
+  // Mobile nav toggle
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Before/After Slider
+  const slider = document.getElementById('baSlider');
+  const afterWrap = document.getElementById('baAfterWrap');
+  const divider = document.getElementById('baDivider');
+  const handle = document.getElementById('baHandle');
+
+  let isDragging = false;
+
+  function updateSlider(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = (x - rect.left) / rect.width;
+    pct = Math.max(0.05, Math.min(0.95, pct));
+    const pctPx = pct * 100;
+    afterWrap.style.width = pctPx + '%';
+    divider.style.left = pctPx + '%';
+    handle.style.left = pctPx + '%';
+  }
+
+  slider.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
+  window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  slider.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); }, {passive:true});
+  window.addEventListener('touchend', () => { isDragging = false; });
+</script>
+</body>
+</html>
