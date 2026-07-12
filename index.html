@@ -5,11 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RH Cleaning Solutions LTD – North Wales</title>
+<!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="images/rh logo.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/home about.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="images/home professional.jpg" fetchpriority="high">
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="Images/favicon-modified.png" alt="Favicon">
+<link rel="icon" type="image/png" href="images/favicon-modified.png" alt="favicon-modified">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -243,6 +246,7 @@
     outline: none;
     transition: border-color .2s;
     -webkit-appearance: none;
+appearance: none;
   }
   .form-group input::placeholder { color: rgba(255,255,255,0.3); }
   .form-group select option { background: var(--dark2); color: var(--white); }
@@ -1064,28 +1068,29 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html">About</a></li>
+        <li><a href="AboutUs.html">About</a></li>
         <li class="dropdown">
-          <a href="Our Services.html">Our Services ▾</a>
+          <a href="OurServices.html">Our Services ▾</a>
           <div class="dropdown-menu">
-            <a href="hospitality cleaning.html">Hospitality Cleaning</a>
-            <a href="airbnb cleaning.html">AirBnB Cleaning</a>
-            <a href="office cleanig.html">Office Cleaning</a>
-            <a href="house cleaning.html">House Cleaning</a>
-            <a href="apartment cleanig.html">Apartment Cleaning</a>
+            <a href="hospitalitycleaning.html">Hospitality Cleaning</a>
+            <a href="airbnb-cleaning.html">AirBnB Cleaning</a>
+            <a href="officecleanig.html">Office Cleaning</a>
+            <a href="housecleaning.html">House Cleaning</a>
+            <a href="apartment-cleanig.html">Apartment Cleaning</a>
           </div>
         </li>
-        <li><a href="Contact Us.html">Contact-us</a></li>
+        <li><a href="ContactUs.html">Contact-us</a></li>
         <li><a href="News.html">News</a></li>
       </ul>
     </nav>
 
     <div class="nav-logo">
-    <img src="images/rh logo.png">
+    <img src="images/rh logo.png" alt="RH Cleaning Solutions Logo">
+    <loading="eager" fetchpriority="high">
     </div>
 
     <div style="display:flex;align-items:center;gap:16px;">
-      <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+      <a href="ContactUs.html" class="btn-quote">Get a Quote!</a>
       <div class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
         <span></span><span></span><span></span>
       </div>
@@ -1093,11 +1098,11 @@
   </div>
   <nav class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
-    <a href="About Us.html">About</a>
-    <a href="Our Services.html">Our Services</a>
-    <a href="Contact Us.html">Contact-us</a>
+    <a href="AboutUs.html">About</a>
+    <a href="OurServices.html">Our Services</a>
+    <a href="ContactUs.html">Contact-us</a>
     <a href="News.html">News</a>
-    <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+    <a href="ContactUs.html" class="btn-quote">Get a Quote!</a>
   </nav>
 </header>
 
@@ -1108,7 +1113,7 @@
       <p class="hero-overline">Professional Cleaning in Bangor &amp; Surrounding Areas</p>
       <h1>Cleaning  <span class="blue">Services </span>You <span class="blue">Can Trust</span> </h1>
       <p class="hero-sub">RH Cleaning Solutions LTD provides professional residential and commercial cleaning services, including hospitality, AirBnB, office, and domestic cleaning in Bangor and the surrounding areas. We pride ourselves on delivering reliable, high-quality cleaning with short-notice availability whenever possible, ensuring your property is spotless when you need it most.</p>
-      <a href="Our Services.html" class="btn-outline">Our Services</a>
+      <a href="OurServices.html" class="btn-outline">Our Services</a>
     </div>
 
     <div class="lead-form">
@@ -1157,16 +1162,18 @@
     <div class="about-top">
       <!-- Cleaner Illustration SVG -->
 
-      <img src="images/home about.jpg"
+      <img src="images/home about.png"
      class="cleaner-illustration"
+     loading="eager" fetchpriority="high"
      alt="About Image">
+     <loading="eager" fetchpriority="high">
 
       <div>
         <p class="about-overline">About Our Company</p>
         <h2>We offer a <span class="blue">Wide Range Of Specialist</span> cleaning services.</h2>
         <p>RH Cleaning Solutions LTD provides professional specialist cleaning services for both residential and commercial clients in Bangor and the surrounding areas. From homes and offices to Airbnb properties and hospitality venues, we deliver reliable, high-quality cleaning solutions tailored to your individual requirements.</p>
         <p>With a commitment to exceptional standards, dependable service, and short-notice availability whenever possible, our experienced team helps keep every property clean, hygienic, and welcoming.</p>
-        <a href="About Us.html" class="btn-blue">About Us</a>
+        <a href="AboutUs.html" class="btn-blue">About Us</a>
       </div>
     </div>
 
@@ -1204,7 +1211,7 @@
         </div>
         <h4>Book Appointment</h4>
         <p>Flexible scheduling to fit your routine. Several options available for one-off, weekly, or monthly cleans.</p>
-        <a href="Contact Us.html">Booking now →</a>
+        <a href="ContactUs.html">Booking now →</a>
       </div>
     </div>
   </div>
@@ -1218,6 +1225,7 @@
         <img src="images/home professional.jpg"
          class="cleaner-illustration"
          alt="About Image">
+         <loading="eager" fetchpriority="high">
 
       </div>
       <div class="badge">
@@ -1232,7 +1240,7 @@
       <p>RH Cleaning Solutions LTD provides reliable home and office cleaning services in Bangor and the surrounding areas. Our experienced, fully trained team delivers exceptional results using high-quality, eco-friendly cleaning products and proven techniques.
 
 Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy service, or urgent short-notice cleaning, we're committed to leaving every property spotless, hygienic, and ready to enjoy.</p>
-      <a href="Contact Us.html" class="btn-blue">Contact Us</a>
+      <a href="ContactUs.html" class="btn-blue">Contact Us</a>
     </div>
   </div>
 </section>
@@ -1247,39 +1255,44 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
     <!-- Card 1 -->
     <div class="service-card">
       <img src="images/hospitality.jpg" 
+      loading="eager" fetchpriority="high"
            alt="AirBnB & Hospitality Cleaning" class="card-image">
+           <loading="lazy">
       <div class="card-body">
         <h3>AirBnB &amp; Hospitality Cleaning</h3>
         <p>Guest-ready turnovers and deep property refreshes for AirBnB hosts and hospitality businesses across North Wales.</p>
-        <a href="hospitality cleaning.html" class="read-more">Read More →</a>
+        <a href="hospitalitycleaning.html" class="read-more">Read More →</a>
       </div>
     </div>
 
     <!-- Card 2 -->
     <div class="service-card">
       <img src="images/office.jpg" 
+      loading="eager" fetchpriority="high"
            alt="Office Cleaning" class="card-image">
+           <loading="eager" fetchpriority="high">
       <div class="card-body">
         <h3>Office Cleaning</h3>
         <p>Professional, discreet cleaning solutions for offices and commercial premises — flexible hours, consistent results.</p>
-        <a href="office cleanig.html" class="read-more">Read More →</a>
+        <a href="officecleaning.html" class="read-more">Read More →</a>
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="service-card">
       <img src="images/appartment.jpg" 
+      loading="eager" fetchpriority="high"
            alt="House & Apartment Cleaning" class="card-image">
       <div class="card-body">
         <h3>House &amp; Apartment Cleaning</h3>
         <p>Thorough residential cleaning — from weekly maintenance to full deep cleans. Serving homes across the region.</p>
-        <a href="apartment cleanig.html" class="read-more">Read More →</a>
+        <a href="apartment-cleanig.html" class="read-more">Read More →</a>
       </div>
     </div>
   </div>
 
   <div class="center-btn">
-    <a href="Our Services.html" class="btn-blue">View More Services</a>
+    <a href="OurServices.html" class="btn-blue">View More Services</a>
   </div>
 </section>
 
@@ -1288,10 +1301,10 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
   <div class="pricing-header">
     <h2>Cleaning <span class="blue">Tailored to <br>Your</span> needs</h2>
     <p>Professional, reliable cleaning services tailored to your requirements, with short-notice availability when you need us most.</p>
-    <p>Transparent pricing with  <strong>no hidden costs</strong>.</p>
+    <p>Transparent pricing  that  starts from as little as 16£ per hour with <strong>no hidden costs</strong>.</p>
   </div>
   <div style="max-width:1100px; margin:0 auto; text-align: center;">
-    <a href="Contact Us.html" class="cta-banner">
+    <a href="ContactUs.html" class="cta-banner">
     📅Book on Short Notice.
     </a>
 </div>
@@ -1355,8 +1368,8 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
         <li>Flexible Scheduling</li>
       </ul>
       <div class="ba-btns">
-        <a href="Contact Us.html" class="btn-blue">Try yours now</a>
-        <a href="About Us.html" class="btn-white">About us</a>
+        <a href="ContactUs.html" class="btn-blue">Try yours now</a>
+        <a href="AboutUs.html" class="btn-white">About us</a>
       </div>
     </div>
 
@@ -1364,12 +1377,14 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
 
     <img src="images/Before.png"
          class="ba-slider-before"
+         loading="eager" fetchpriority="high"
          alt="Before Cleaning">
 
     <div class="ba-slider-after-wrap" id="baAfterWrap">
 
         <img src="images/After.png"
              class="ba-slider-after"
+             loading="eager" fetchpriority="high"
              alt="After Cleaning">
 
     </div>
@@ -1385,9 +1400,9 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
 
 <!-- EMERGENCY BANNER -->
 <section class="emergency-banner">
-  <h3>Cleaning</span> Services in <span class="blue">BANGOR</span></h3>
+  <h3>Cleaning</span> Services in <span class="blue">Bangor and nearby areas</span></h3>
   <p>Don't panic — call us! Available 12 hours, 365 days.</p>
-  <a href="Contact Us.html" class="btn-blue">Book Now</a>
+  <a href="ContactUs.html" class="btn-blue">Book Now</a>
 </section>
 
 <!-- FOOTER -->
@@ -1395,7 +1410,8 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
   <div class="footer-inner">
     <div class="footer-col">
       <div class="footer-logo">
-    <img src="images/rh logo.png">
+    <img src="images/rh logo.png" alt="RH Cleaning Solutions LTD Logo">
+    <loading="eager" fetchpriority="high">
 </div>
       <p>Professional cleaning services for homes and businesses in Bangor and the surrounding areas.</p>
       <p class="company-num">Company No: 17282518</p>
@@ -1404,11 +1420,11 @@ Whether you need regular cleaning, a one-off deep clean, an end-of-tenancy servi
     <div class="footer-col">
       <h4>Our Services</h4>
       <ul>
-        <li><a href="hospitality cleaning.html">Hospitality Cleaning</a></li>
-        <li><a href="airbnb cleaning.html">AirBnB Cleaning</a></li>
-        <li><a href="office cleanig.html">Office Cleaning</a></li>
-        <li><a href="house cleaning.html">House Cleaning</a></li>
-        <li><a href="apartment cleanig.html">Apartment Cleaning</a></li>
+        <li><a href="hospitalitycleaning.html">Hospitality Cleaning</a></li>
+        <li><a href="airbnb-cleaning.html">AirBnB Cleaning</a></li>
+        <li><a href="officecleaning.html">Office Cleaning</a></li>
+        <li><a href="housecleaning.html">House Cleaning</a></li>
+        <li><a href="apartment-cleanig.html">Apartment Cleaning</a></li>
       </ul>
     </div>
 
