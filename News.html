@@ -5,8 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog & News - RH Cleaning Solutions LTD</title>
+<!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="images/rh logo.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/sunset north wales new.jpg" fetchpriority="high">
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon-modified.png">
+<link rel="icon" type="image/png" href="images/favicon-modified.png" alt="favicon-modified">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -451,28 +454,30 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html">About</a></li>
+        <li><a href="AboutUs.html">About</a></li>
         <li class="dropdown">
-          <a href="Our Services.html">Our Services ▾</a>
+          <a href="OurServices.html">Our Services ▾</a>
           <div class="dropdown-menu">
-            <a href="hospitality cleaning.html">Hospitality Cleaning</a>
-            <a href="airbnb cleaning.html">AirBnB Cleaning</a>
-            <a href="office cleanig.html">Office Cleaning</a>
-            <a href="house cleaning.html">House Cleaning</a>
-            <a href="apartment cleanig.html">Apartment Cleaning</a>
+            <a href="hospitalitycleaning.html">Hospitality Cleaning</a>
+            <a href="airbnb-cleaning.html">AirBnB Cleaning</a>
+            <a href="officecleaning.html">Office Cleaning</a>
+            <a href="housecleaning.html">House Cleaning</a>
+            <a href="apartment-cleanig.html">Apartment Cleaning</a>
           </div>
         </li>
-        <li><a href="Contact Us.html">Contact-us</a></li>
+        <li><a href="ContactUs.html">Contact-us</a></li>
         <li><a href="News.html">News</a></li>
       </ul>
     </nav>
 
     <div class="nav-logo">
-    <img src="images/rh logo.png" alt="RH Cleaning Solutions Logo">
+    <img src="images/rh logo.png" 
+    loading="eager" fetchpriority="high"
+    alt="RH Cleaning Solutions Logo">
     </div>
 
     <div style="display:flex;align-items:center;gap:16px;">
-      <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+      <a href="ContactUs.html" class="btn-quote">Get a Quote!</a>
       <div class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
         <span></span><span></span><span></span>
       </div>
@@ -480,11 +485,11 @@
     </div>
   <nav class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
-    <a href="About Us.html">About</a>
-    <a href="Our Services.html">Our Services</a>
-    <a href="Contact Us.html">Contact-us</a>
+    <a href="AboutUs.html">About</a>
+    <a href="OurServices.html">Our Services</a>
+    <a href="ContactUs.html">Contact-us</a>
     <a href="News.html">News</a>
-    <a href="Contact Us.html" class="btn-quote">Get a Quote!</a>
+    <a href="ContactUs.html" class="btn-quote">Get a Quote!</a>
   </nav>
 </header>
 
@@ -499,17 +504,21 @@
   <div class="blog-grid">
 
     <div class="blog-card">
-      <img src="images/sunset north wales new.jpg" alt="North Wales Cleaning News">
+      <img src="images/sunset north wales new.jpg" 
+      loading="eager" fetchpriority="high"
+      alt="North Wales Cleaning News">
       <div class="blog-body">
         <div class="category">North Wales</div>
         <h3>Best Spring Cleaning Tips for Homes in North Wales 2026</h3>
         <p>Complete checklist to refresh your home this spring season.</p>
-        <a href="North-Wales news.html" class="read-more">Read More →</a>
+        <a href="North-Walesnews.html" class="read-more">Read More →</a>
       </div>
     </div>
 
     <div class="blog-card">
-      <img src="images/airbnb.jpg" alt="AirBnb News">
+      <img src="images/airbnb.jpg" 
+      loading="eager" fetchpriority="high"
+      alt="AirBnb News">
       <div class="blog-body">
         <div class="category">AirBnB</div>
         <h3>How to Get 5-Star Reviews with Professional Cleaning</h3>
@@ -519,37 +528,45 @@
     </div>
 
     <div class="blog-card">
-      <img src="images/business news.jpg" alt="Busniess News">
+      <img src="images/business news.jpg" 
+      loading="eager" fetchpriority="high"
+      alt="Busniess News">
       <div class="blog-body">
         <div class="category">Business</div>
         <h3>Why Clean Offices Improve Employee Productivity</h3>
         <p>Latest research and benefits for businesses in UK.</p>
-        <a href="business-news.html" class="read-more">Read More →</a>
+        <a href="businessnews.html" class="read-more">Read More →</a>
       </div>
     </div>
 
     <div class="blog-card">
-      <img src="images/eco-friendly.jpg" alt="Eco friendly cleaning news">
+      <img src="images/eco-friendly.jpg" 
+      loading="eager" fetchpriority="high"
+      alt="Eco friendly cleaning news">
       <div class="blog-body">
         <div class="category">Eco-Friendly</div>
         <h3>Best Eco-Friendly Cleaning Products in 2026</h3>
         <p>Our top recommendations for sustainable cleaning.</p>
-        <a href="Eco-friendly-news.html" class="read-more">Read More →</a>
+        <a href="Ecofriendly-news.html" class="read-more">Read More →</a>
       </div>
     </div>
 
     <div class="blog-card">
-      <img src="images/seasonal.jpg" alt="Seasonal Cleaning News">
+      <img src="images/seasonal.jpg" 
+      loading="eager" fetchpriority="high"
+      alt="Seasonal Cleaning News">
       <div class="blog-body">
         <div class="category">Seasonal</div>
         <h3>Winter Deep Cleaning Guide for North Wales Homes</h3>
         <p>How to fight mould, damp and keep your home fresh in winter.</p>
-        <a href="Seasonal-news.html" class="read-more">Read More →</a>
+        <a href="Seasonalnews.html" class="read-more">Read More →</a>
       </div>
     </div>
 
     <div class="blog-card">
-      <img src="images/hospitality.jpg" alt="Hospitality Cleaning News">
+      <img src="images/hospitality.jpg" 
+      loading="eager" fetchpriority="high"
+      alt="Hospitality Cleaning News">
       <div class="blog-body">
         <div class="category">Hospitality</div>
         <h3>Hygiene Standards for Hospitality Businesses in UK</h3>
@@ -566,7 +583,9 @@
   <div class="footer-inner">
     <div class="footer-col">
 <div class="footer-logo">
-    <img src="images/rh logo.png" alt="RH Cleaning Solutions LTD Logo">
+    <img src="images/rh logo.png"
+    loading="eager" fetchpriority="high"
+    alt="RH Cleaning Solutions LTD Logo">
 </div>
       <p>Professional cleaning services for homes and businesses in Bangor and the surrounding areas.</p>
       <p class="company-num">Company No: 17282518</p>
@@ -575,11 +594,11 @@
     <div class="footer-col">
       <h4>Our Services</h4>
       <ul>
-        <li><a href="hospitality cleaning.html">Hospitality Cleaning</a></li>
-        <li><a href="airbnb cleaning.html">AirBnB Cleaning</a></li>
-        <li><a href="office cleanig.html">Office Cleaning</a></li>
-        <li><a href="house cleaning.html">House Cleaning</a></li>
-        <li><a href="apartment cleanig.html">Apartment Cleaning</a></li>
+        <li><a href="hospitalitycleaning.html">Hospitality Cleaning</a></li>
+        <li><a href="airbnb-cleaning.html">AirBnB Cleaning</a></li>
+        <li><a href="officecleaning.html">Office Cleaning</a></li>
+        <li><a href="housecleaning.html">House Cleaning</a></li>
+        <li><a href="apartment-cleanig.html">Apartment Cleaning</a></li>
       </ul>
     </div>
 
@@ -616,38 +635,6 @@
   function toggleMobileNav() {
     document.getElementById('mobileNav').classList.toggle('open');
   }
-
-  // Before/After Slider
-  const slider = document.getElementById('baSlider');
-  const afterWrap = document.getElementById('baAfterWrap');
-  const divider = document.getElementById('baDivider');
-  const handle = document.getElementById('baHandle');
-
-  let isDragging = false;
-
-  function updateSlider(x) {
-    const rect = slider.getBoundingClientRect();
-    let pct = (x - rect.left) / rect.width;
-    pct = Math.max(0.05, Math.min(0.95, pct));
-    const pctPx = pct * 100;
-    afterWrap.style.width = pctPx + '%';
-    divider.style.left = pctPx + '%';
-    handle.style.left = pctPx + '%';
-  }
-
-  slider.addEventListener('mousedown', (e) => { isDragging = true; updateSlider(e.clientX); });
-  window.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
-  window.addEventListener('mouseup', () => { isDragging = false; });
-
-  slider.addEventListener('touchstart', (e) => { isDragging = true; updateSlider(e.touches[0].clientX); }, {passive:true});
-  window.addEventListener('touchmove', (e) => { if (isDragging) updateSlider(e.touches[0].clientX); }, {passive:true});
-  window.addEventListener('touchend', () => { isDragging = false; });
-</script>
-</body>
-</html>
-
-
-</footer>
 </script>
 </body>
 </html>
